@@ -8,6 +8,7 @@ body {
     margin: 0 auto;
     padding: 0;
     font-family: 'Poppins', sans-serif;
+    background-color: #E5E5E5;
 }
 
 /* header section */
@@ -19,7 +20,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 40vh;
+    padding: 0 55vh;
 }
 
 .nav-logo {
@@ -48,17 +49,138 @@ header {
     color: #FFFFFF;
 }
 
+/* main section */
+
+/* top section */
+.top {
+    padding: 3vh 55vh;
+    border-radius: 5px;
+}
+
+.top-container {
+    background: #FFFFFF;
+    padding: 2vh 3vh 7vh 3vh;
+    border-radius: 10px;
+}
+
+.top-container hr {
+    border: 1px solid #D1D1D1;
+    margin: 2vh 2vh 0 0;
+}
+
+.top h3 {
+    color: var(--main-bg-color);
+}
+
+/* player section */
+
+.player {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2vh;
+}
+
+.player div {
+    display: flex;
+    align-items: center;
+    gap: 2vh;
+}
+
+.player img {
+    width: 15%;
+}
+
+.player p {
+    font-weight: 600;
+    font-size: 0.8rem;
+    color: #000000;
+}
+
+/* top-blog section */
+.blog {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1vh;
+    row-gap: 3vh;
+}
+
+.blog p {
+    color: #9F9F9F;
+    font-size: 0.8rem;
+}
+
+.blog p span {
+    color: var(--main-bg-color);
+}
+
+.blog-each {
+    display: flex;
+    align-items: center;
+    gap: 1vh;
+}
+
+.blog-each img {
+    width: 50%;
+    height: 10vh;
+}
+
+
+.blog-each div h4,
+p {
+    padding: 0;
+    margin: 0;
+}
+
+.blog-each {
+    display: flex;
+    align-items: center;
+    gap: 1vh;
+}
 
 /* media query */
 @media only screen and (max-width: 576px) {
+
+    /* top section */
+    .top {
+        padding: 2vh;
+        text-align: center;
+    }
+
+    .player {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 3vh;
+    }
+
+    .player div {
+        justify-content: center;
+        gap: 2vh;
+    }
+
+    .blog {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1vh;
+        row-gap: 3vh;
+    }
+
+    .blog-each {
+        flex-direction: column;
+    }
+
+    .blog-each img {
+        width: 70%;
+        height: 70%;
+    }
     /* header section */
     .nav-container {
         padding: 2vh;
     }
+
     .nav-logo img {
         width: 20%;
     }
+
     .nav-bar {
         gap: 1vh;
     }
+
 }
